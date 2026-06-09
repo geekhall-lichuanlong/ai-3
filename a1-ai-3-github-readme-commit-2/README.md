@@ -18,7 +18,7 @@
 ## 快速开始
 
 ```powershell
-cd C:\Users\33188\Documents\Codex\2026-06-09\a1-ai-3-github-readme-commit-2
+cd C:\Users\33188\Documents\Codex\2026-06-09\a1-ai-3-github-readme-commit-2 (以下涉及所有路径改为你的本地对应文件地址)
 pip install -e ".[dev]"
 python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
