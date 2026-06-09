@@ -1,8 +1,8 @@
 # 工程决策文档
 
-## 目标与边界
+## 目标
 
-目标是在本地交付一个可以演示核心风险控制的企业多租户 AI 问答模块。重点是租户隔离、可观测摄取状态、混合检索、基于语料库的大模型流式问答、配额控制和工程取舍清楚。
+交付一个可以演示核心风险控制的企业多租户 AI 问答模块。重点是租户隔离、可观测摄取状态、混合检索、基于语料库的大模型流式问答、配额控制和工程取舍清楚。
 
 本项目不是生产级 RAG 平台，但保留了可以替换生产组件的边界：embedding provider、tenant storage、retriever、answer generator。
 
@@ -56,7 +56,7 @@
 
 原因：
 
-- 不需要外部 embedding API key，评审者 clone 后可以立即运行检索。
+- 不需要外部 embedding API key，可 clone 后可以立即运行检索。
 - embedding 可复现，测试稳定。
 - 每个租户是独立索引文件，不依赖 metadata filter 做隔离，能直接展示物理隔离设计。
 - 便于替换生产组件：`HashingEmbedding` 可以换成真实 embedding，`TenantStorage` 可以换成 pgvector/Qdrant/Milvus。
