@@ -1,1 +1,0 @@
-The enterprise answer mentions zero trust networking and private vector indexes.

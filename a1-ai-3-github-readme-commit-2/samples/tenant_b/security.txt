@@ -1,5 +1,0 @@
-Tenant B operates a healthcare scheduling product.
-
-Tenant B requires HIPAA review for every integration. The data retention period is seven years.
-Support tickets marked urgent must be answered within 30 minutes during business hours.
-
