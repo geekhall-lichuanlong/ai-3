@@ -95,6 +95,16 @@ Tenant A 每日默认 token 配额为 2000。
 模型：deepseek-v4-flash
 ```
 
+
+
+## 工程决策摘要
+
+完整决策见 [docs/DECISIONS.md](docs/DECISIONS.md)。
+
+- 向量方案：使用本地 Hashing Embedding + JSON 向量索引，优先保证离线可跑和租户物理隔离；生产可替换为 pgvector、Qdrant 或 Milvus 的 per-tenant collection。
+- Chunking：默认 `chunk_size=500`、`chunk_overlap=80` 字符；中文/英文演示数据都能保留上下文，同时避免单块太大导致召回粗糙。
+- 混合检索：向量相似度和 BM25 各取候选后用 RRF 融合，测试覆盖了单一路线不稳定时融合仍召回目标文档。
+  
 ## Swagger 测试
 
 打开：
