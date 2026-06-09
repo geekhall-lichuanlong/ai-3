@@ -1,0 +1,2 @@
+Alpha SLA is 99.9 percent monthly uptime.
+Escalation is required within 15 minutes.

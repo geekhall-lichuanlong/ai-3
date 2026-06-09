@@ -1,0 +1,1 @@
+Tenant A SLA is 99.9 percent. Incidents escalate in 15 minutes.
